@@ -27,31 +27,28 @@ export default function Hero() {
             sizes="100vw"
             className="object-cover"
           />
-          {/* Keeps the headline legible over any photo. */}
+          {/*
+            Scrim tuned to keep the headline legible while still letting the
+            photo read. Heaviest on the left where the copy sits, lifting to
+            the right so the image stays visible.
+          */}
           <div
             aria-hidden="true"
-            className="absolute inset-0 bg-navy-950/85 sm:bg-gradient-to-r sm:from-navy-950 sm:via-navy-950/92 sm:to-navy-950/70"
+            className="absolute inset-0 bg-navy-950/65 sm:bg-gradient-to-r sm:from-navy-950/92 sm:via-navy-950/75 sm:to-navy-950/40"
           />
         </>
       )}
+      {/* Brand glow. Pulled back over a photo so it tints rather than washes. */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.55]"
+        className={`pointer-events-none absolute inset-0 ${
+          heroPhoto ? "opacity-[0.3]" : "opacity-[0.55]"
+        }`}
         style={{
           backgroundImage:
             "radial-gradient(60rem 32rem at 78% -10%, rgba(245,158,11,0.22), transparent 60%), radial-gradient(48rem 32rem at 8% 108%, rgba(51,112,183,0.35), transparent 62%)",
         }}
       />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.06]"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px)",
-          backgroundSize: "56px 56px",
-        }}
-      />
-
       <div className="container-x relative">
         <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="animate-fade-up">
