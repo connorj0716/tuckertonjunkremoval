@@ -5,10 +5,11 @@ import {
   HardHat,
   Home,
   Leaf,
+  Phone,
   Trash2,
   WashingMachine,
 } from "lucide-react";
-import { services } from "@/lib/site";
+import { services, site } from "@/lib/site";
 import { getPhoto, photoAlt, type PhotoSlot } from "@/lib/photos";
 
 const icons: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -92,12 +93,13 @@ export default function Services() {
             Not sure if we take it?
           </h3>
           <p className="mx-auto mt-3 max-w-xl text-navy-200">
-            Send a photo and we will give you a straight answer plus a price in
-            minutes. No pressure, no obligation.
+            Give us a call and we will give you a straight answer plus a price
+            in minutes. No pressure, no obligation.
           </p>
           <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
-            <a href="#contact" className="btn-primary">
-              Get My Free Quote
+            <a href={site.phoneHref} className="btn-primary">
+              <Phone className="h-5 w-5" strokeWidth={2.5} />
+              Call {site.phone}
             </a>
           </div>
         </div>

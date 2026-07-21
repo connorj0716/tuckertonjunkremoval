@@ -97,8 +97,8 @@ export default function Hero() {
                 <Phone className="h-5 w-5" strokeWidth={2.5} />
                 Call {site.phone}
               </a>
-              <a href="#contact" className="btn-secondary">
-                Get a Free Quote
+              <a href="#services" className="btn-secondary">
+                See What We Take
               </a>
             </div>
 

@@ -8,59 +8,28 @@ Live at [tuckertonjunkremoval.com](https://tuckertonjunkremoval.com).
 
 - Next.js 14 (App Router) with TypeScript
 - Tailwind CSS
-- Supabase JS v2 for lead storage
-- Resend for lead notification emails
 - Deployed on Vercel
 
 ## Local development
 
 ```bash
 npm install
-cp .env.example .env.local   # then fill in the real values
 npm run dev
 ```
 
 Open http://localhost:3000.
 
-## Environment variables
+There are no environment variables and no server functions. Every route is
+statically generated, so the site is pure static output on the CDN.
 
-| Variable | Purpose |
-| --- | --- |
-| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL |
-| `SUPABASE_SERVICE_ROLE_KEY` | Server-only key used to insert leads |
-| `RESEND_API_KEY` | Sends the new-lead notification email |
+## Contact strategy
 
-The service role key is read only inside `app/api/lead/route.ts`, which runs
-server side. It is never exposed to the browser.
+The site drives phone calls rather than form fills. Every call to action is a
+`tel:` link to (609) 703-2115, including the sticky mobile bar, so there is no
+lead database, no notification email, and no API route to maintain.
 
-## Lead flow
-
-1. The contact form posts to `POST /api/lead`.
-2. The route validates the payload and inserts a row into the Supabase table
-   `OCJR - Leads` with `source` set to `tuckerton-website` and `handled` set to
-   `false`.
-3. On a successful insert it sends a notification through Resend from
-   `connor@cjresults.com` to `connor@cjresults.com`.
-
-If the Resend call fails the request still succeeds, since the lead is already
-saved in Supabase. The failure is logged instead.
-
-### Supabase table
-
-Table name: `OCJR - Leads`
-
-| Column | Type |
-| --- | --- |
-| `id` | primary key |
-| `name` | text |
-| `phone` | text |
-| `email` | text, nullable |
-| `town` | text |
-| `service` | text |
-| `message` | text, nullable |
-| `source` | text, defaults to `tuckerton-website` |
-| `handled` | boolean |
-| `created_at` | timestamptz |
+If a form is ever needed again, the previous Supabase and Resend
+implementation is in git history.
 
 ## SEO
 

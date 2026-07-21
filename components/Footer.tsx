@@ -6,7 +6,7 @@ const links = [
   { href: "#why-us", label: "Why Us" },
   { href: "#service-area", label: "Service Area" },
   { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Free Quote" },
+  { href: "#contact", label: "Call Us" },
 ];
 
 export default function Footer() {

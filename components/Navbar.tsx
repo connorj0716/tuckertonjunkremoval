@@ -10,7 +10,7 @@ const links = [
   { href: "#why-us", label: "Why Us" },
   { href: "#service-area", label: "Service Area" },
   { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Contact" },
+  { href: "#contact", label: "Call Us" },
 ];
 
 export default function Navbar() {
@@ -95,11 +95,12 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="#contact"
+              href={site.phoneHref}
               onClick={() => setOpen(false)}
               className="btn-primary my-4"
             >
-              Get My Free Quote
+              <Phone className="h-5 w-5" strokeWidth={2.5} />
+              Call {site.phone}
             </a>
           </nav>
         </div>

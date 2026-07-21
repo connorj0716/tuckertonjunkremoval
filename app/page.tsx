@@ -1,4 +1,4 @@
-import ContactForm from "@/components/ContactForm";
+import CallCta from "@/components/CallCta";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
@@ -20,7 +20,7 @@ export default function HomePage() {
         <WhyUs />
         <ServiceArea />
         <Faq />
-        <ContactForm />
+        <CallCta />
       </main>
       <Footer />
       <StickyCta />
