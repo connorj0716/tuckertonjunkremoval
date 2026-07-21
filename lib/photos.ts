@@ -35,10 +35,14 @@ export function getPhoto(slot: PhotoSlot): string | null {
   return null;
 }
 
+/**
+ * Alt text must describe what the photo actually shows, not what we wish it
+ * showed. Update the entry whenever a slot's image is replaced.
+ */
 export const photoAlt: Record<PhotoSlot, string> = {
-  hero: "Junk removal truck loaded and ready for a pickup in Tuckerton, NJ",
+  hero: "A dump truck parked in an open field at dusk",
   "junk-removal":
-    "Household junk cleared out of a garage in Tuckerton, NJ",
+    "A room piled with old chairs, wooden furniture, and household clutter waiting to be cleared out",
   "furniture-removal":
     "Old couch and furniture removed from a home in Tuckerton, NJ",
   "appliance-removal":
