@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   Armchair,
   Check,
@@ -8,6 +9,7 @@ import {
   WashingMachine,
 } from "lucide-react";
 import { services } from "@/lib/site";
+import { getPhoto, photoAlt, type PhotoSlot } from "@/lib/photos";
 
 const icons: Record<string, React.ComponentType<{ className?: string }>> = {
   "junk-removal": Trash2,
@@ -37,31 +39,49 @@ export default function Services() {
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => {
             const Icon = icons[s.slug] ?? Trash2;
+            const photo = getPhoto(s.slug as PhotoSlot);
             return (
               <article
                 key={s.slug}
-                className="group flex flex-col rounded-2xl border border-navy-100 bg-white p-7 shadow-card transition-all duration-200 hover:-translate-y-1 hover:border-amber-500/40 hover:shadow-lift"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-navy-100 bg-white shadow-card transition-all duration-200 hover:-translate-y-1 hover:border-amber-500/40 hover:shadow-lift"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-navy-950 transition-colors duration-200 group-hover:bg-amber-500">
-                  <Icon className="h-6 w-6 text-amber-400 transition-colors duration-200 group-hover:text-navy-950" />
-                </span>
-                <h3 className="mt-5 text-xl font-bold text-navy-950">
-                  {s.title}
-                </h3>
-                <p className="mt-3 flex-1 leading-relaxed text-navy-700">
-                  {s.blurb}
-                </p>
-                <ul className="mt-5 space-y-2 border-t border-navy-100 pt-5">
-                  {s.bullets.map((b) => (
-                    <li
-                      key={b}
-                      className="flex items-start gap-2 text-sm font-medium text-navy-800"
-                    >
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-amber-600" />
-                      {b}
-                    </li>
-                  ))}
-                </ul>
+                {photo && (
+                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-navy-100">
+                    <Image
+                      src={photo}
+                      alt={photoAlt[s.slug as PhotoSlot]}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-300 group-hover:scale-[1.04]"
+                    />
+                  </div>
+                )}
+                <div className="flex flex-1 flex-col p-7">
+                  <span
+                    className={`flex h-12 w-12 items-center justify-center rounded-xl bg-navy-950 transition-colors duration-200 group-hover:bg-amber-500 ${
+                      photo ? "-mt-14 shadow-lift ring-4 ring-white" : ""
+                    }`}
+                  >
+                    <Icon className="h-6 w-6 text-amber-400 transition-colors duration-200 group-hover:text-navy-950" />
+                  </span>
+                  <h3 className="mt-5 text-xl font-bold text-navy-950">
+                    {s.title}
+                  </h3>
+                  <p className="mt-3 flex-1 leading-relaxed text-navy-700">
+                    {s.blurb}
+                  </p>
+                  <ul className="mt-5 space-y-2 border-t border-navy-100 pt-5">
+                    {s.bullets.map((b) => (
+                      <li
+                        key={b}
+                        className="flex items-start gap-2 text-sm font-medium text-navy-800"
+                      >
+                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-amber-600" />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </article>
             );
           })}

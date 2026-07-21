@@ -1,5 +1,7 @@
+import Image from "next/image";
 import { CheckCircle2, Phone, Star } from "lucide-react";
 import { site } from "@/lib/site";
+import { getPhoto, photoAlt } from "@/lib/photos";
 
 const points = [
   "Same-day and next-day pickup",
@@ -8,11 +10,30 @@ const points = [
 ];
 
 export default function Hero() {
+  const heroPhoto = getPhoto("hero");
+
   return (
     <section
       id="top"
       className="relative overflow-hidden bg-navy-950 pb-16 pt-[104px] sm:pb-24 sm:pt-[136px]"
     >
+      {heroPhoto && (
+        <>
+          <Image
+            src={heroPhoto}
+            alt={photoAlt.hero}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          {/* Keeps the headline legible over any photo. */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-navy-950/85 sm:bg-gradient-to-r sm:from-navy-950 sm:via-navy-950/92 sm:to-navy-950/70"
+          />
+        </>
+      )}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 opacity-[0.55]"
