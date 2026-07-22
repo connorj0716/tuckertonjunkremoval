@@ -5,32 +5,32 @@ const reasons = [
   {
     icon: MapPin,
     title: "Actually local",
-    body: "We are based in Manahawkin, minutes up Route 9 from Tuckerton. You get a neighbor with a truck, not a call center routing your job to a stranger.",
+    body: "Based in Manahawkin, minutes up Route 9. You get a neighbor with a truck, not a call center.",
   },
   {
     icon: Clock,
     title: "Same-day when you need it",
-    body: "Call in the morning and there is a good chance we are at your Tuckerton or Little Egg Harbor address that afternoon. Closings and move-outs are our specialty.",
+    body: "Call in the morning and we are often at your Tuckerton or Little Egg Harbor address that afternoon.",
   },
   {
     icon: DollarSign,
     title: "Upfront pricing, no surprises",
-    body: "You see the price before we lift a thing. We charge by the space your load takes up, so there is no meter running and no fee added at the end.",
+    body: "You see the price before we lift a thing. No meter running, no fees added at the end.",
   },
   {
     icon: Star,
     title: "200+ five-star reviews",
-    body: "Ocean County families, realtors, and contractors have rated us five stars more than 200 times on Google. Reputation is the only reason this business grows.",
+    body: "Ocean County families, realtors, and contractors have rated us five stars more than 200 times on Google.",
   },
   {
     icon: Recycle,
     title: "Donate and recycle first",
-    body: "Usable furniture and household goods go to local donation centers, metal and appliances go to recyclers, and the landfill is the last stop, not the first.",
+    body: "Usable goods go to local donation centers and metal to recyclers. The landfill is the last stop.",
   },
   {
     icon: ShieldCheck,
     title: "Insured and careful",
-    body: "Fully insured crew, floor protection on the way out, and a broom before we leave. Your walls, stairs, and driveway stay the way we found them.",
+    body: "Insured crew, floor protection on the way out, and a broom before we leave.",
   },
 ];
 
@@ -44,9 +44,9 @@ export default function WhyUs() {
             Why Tuckerton keeps calling the same junk removal crew
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-navy-700">
-            Plenty of companies will haul your stuff. Very few will show up on
-            time, charge what they quoted, and leave the space cleaner than they
-            found it.
+            Plenty of companies will haul your stuff. Few show up on time,
+            charge what they quoted, and leave the space cleaner than they found
+            it.
           </p>
         </div>
 

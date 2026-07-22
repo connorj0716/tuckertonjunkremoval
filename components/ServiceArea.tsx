@@ -34,13 +34,12 @@ export default function ServiceArea() {
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-navy-700">
               We run out of Manahawkin, which puts Tuckerton, Little Egg Harbor,
-              and Mystic Island a short drive away. That is why we can offer
-              same-day pickup down here when the bigger national outfits cannot.
+              and Mystic Island a short drive away. That is how we offer same-day
+              pickup when the national outfits cannot.
             </p>
             <p className="mt-4 leading-relaxed text-navy-700">
-              Do not see your town listed? We cover most of Ocean County. Give
-              us a call and we will tell you straight away whether we can get to
-              you.
+              Do not see your town? We cover most of Ocean County. Call and we
+              will tell you straight away.
             </p>
             <div className="mt-8 rounded-2xl bg-navy-950 p-7">
               <div className="flex items-center gap-3">
@@ -48,8 +47,8 @@ export default function ServiceArea() {
                 <p className="font-bold text-white">Based in Manahawkin, NJ</p>
               </div>
               <p className="mt-3 leading-relaxed text-navy-200">
-                Tuckerton Junk Removal is the local arm of Ocean County Junk
-                Removal. Same trucks, same crew, same upfront pricing.
+                The local arm of Ocean County Junk Removal. Same trucks, same
+                crew, same upfront pricing.
               </p>
               <a
                 href={site.phoneHref}

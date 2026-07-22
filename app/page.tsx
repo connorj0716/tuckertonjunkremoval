@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import ServiceArea from "@/components/ServiceArea";
 import Services from "@/components/Services";
 import StickyCta from "@/components/StickyCta";
+import TrustBar from "@/components/TrustBar";
 import WhyUs from "@/components/WhyUs";
 
 export default function HomePage() {
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero />
+        <TrustBar />
         <Services />
         <WhyUs />
         <ServiceArea />

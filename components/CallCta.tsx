@@ -5,17 +5,17 @@ const assurances = [
   {
     icon: Clock,
     title: "Seven days a week",
-    body: "We answer 7am to 7pm, weekends included. Call before noon and same-day pickup is usually open.",
+    body: "We answer 7am to 7pm, weekends included. Call before noon for same-day pickup.",
   },
   {
     icon: Star,
     title: "Free phone estimates",
-    body: "Describe the load or text a photo and you get a firm price on the spot. No visit required, no obligation.",
+    body: "Describe the load or text a photo and get a firm price on the spot. No visit needed.",
   },
   {
     icon: MapPin,
     title: "Minutes from Tuckerton",
-    body: "Our trucks run out of Manahawkin, so Tuckerton, Little Egg Harbor, and Mystic Island are a short drive.",
+    body: "Trucks run out of Manahawkin, so Tuckerton, Little Egg Harbor, and Mystic Island are close.",
   },
 ];
 
@@ -31,9 +31,8 @@ export default function CallCta() {
             Call now for a free quote in about two minutes
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-navy-100">
-            One quick call is all it takes. Tell us what needs to go and where
-            you are in Tuckerton, and we will give you a firm price and a
-            pickup window before you hang up.
+            Tell us what needs to go and where you are in Tuckerton. You get a
+            firm price and a pickup window before you hang up.
           </p>
 
           <a

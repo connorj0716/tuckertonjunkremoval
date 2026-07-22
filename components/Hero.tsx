@@ -1,13 +1,7 @@
 import Image from "next/image";
-import { CheckCircle2, Phone, Star } from "lucide-react";
+import { Phone, Star } from "lucide-react";
 import { site } from "@/lib/site";
 import { getPhoto, photoAlt } from "@/lib/photos";
-
-const points = [
-  "Same-day and next-day pickup",
-  "Upfront pricing before we load",
-  "We carry it out, you point",
-];
 
 export default function Hero() {
   const heroPhoto = getPhoto("hero");
@@ -74,58 +68,47 @@ export default function Hero() {
             </h1>
 
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-navy-100">
-              Local crew, honest pricing, and a truck that shows up when we say
-              it will. We handle furniture, appliances, estate cleanouts, and
-              construction debris for Tuckerton, Tuckerton Beach, Little Egg
-              Harbor, Mystic Island, and the Radio Road area.
+              Furniture, appliances, estate cleanouts, and debris hauled from
+              Tuckerton, Tuckerton Beach, Little Egg Harbor, Mystic Island, and
+              the Radio Road area.
             </p>
 
-            <ul className="mt-7 space-y-2.5">
-              {points.map((p) => (
-                <li key={p} className="flex items-center gap-2.5 text-navy-100">
-                  <CheckCircle2
-                    className="h-5 w-5 shrink-0 text-amber-400"
-                    strokeWidth={2.25}
-                  />
-                  <span className="font-medium">{p}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <a href={site.phoneHref} className="btn-primary">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href={site.phoneHref}
+                className="btn-primary w-full py-4 text-lg sm:w-auto sm:py-3.5 sm:text-base"
+              >
                 <Phone className="h-5 w-5" strokeWidth={2.5} />
                 Call {site.phone}
               </a>
-              <a href="#services" className="btn-secondary">
+              <a href="#services" className="btn-secondary w-full sm:w-auto">
                 See What We Take
               </a>
             </div>
 
             <p className="mt-5 text-sm text-navy-300">
-              Serving Tuckerton and all of southern Ocean County, seven days a
-              week.
+              Serving Tuckerton and southern Ocean County, seven days a week.
             </p>
           </div>
 
           <div className="animate-fade-up lg:justify-self-end">
             <div className="rounded-2xl border border-white/10 bg-white/[0.06] p-6 backdrop-blur sm:p-8">
               <h2 className="text-xl font-bold text-white">
-                What a Tuckerton pickup looks like
+                How a Tuckerton pickup works
               </h2>
               <ol className="mt-6 space-y-6">
                 {[
                   {
-                    t: "You call or send photos",
-                    d: "Tell us what you have and where it sits. Photos speed things up but are never required.",
+                    t: "Call or text a photo",
+                    d: "Tell us what you have and where it sits.",
                   },
                   {
-                    t: "You get an upfront price",
-                    d: "We quote by truck space, not by the hour, so the number you hear is the number you pay.",
+                    t: "Get an upfront price",
+                    d: "Priced by truck space, not by the hour. The number you hear is what you pay.",
                   },
                   {
-                    t: "We load and clean up",
-                    d: "Our crew carries everything out, sweeps the space, and hauls it off for donation or recycling.",
+                    t: "We load and sweep up",
+                    d: "We carry it all out and haul it off for donation or recycling.",
                   },
                 ].map((s, i) => (
                   <li key={s.t} className="flex gap-4">

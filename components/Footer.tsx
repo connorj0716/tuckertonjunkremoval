@@ -1,14 +1,6 @@
 import { Mail, MapPin, Phone, Truck } from "lucide-react";
 import { services, site, towns } from "@/lib/site";
 
-const links = [
-  { href: "#services", label: "Services" },
-  { href: "#why-us", label: "Why Us" },
-  { href: "#service-area", label: "Service Area" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Call Us" },
-];
-
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -97,18 +89,6 @@ export default function Footer() {
                   Serving Tuckerton and Ocean County
                 </span>
               </li>
-            </ul>
-            <ul className="mt-5 space-y-2.5 border-t border-white/10 pt-5">
-              {links.map((l) => (
-                <li key={l.href}>
-                  <a
-                    href={l.href}
-                    className="transition-colors hover:text-amber-400"
-                  >
-                    {l.label}
-                  </a>
-                </li>
-              ))}
             </ul>
           </div>
         </div>

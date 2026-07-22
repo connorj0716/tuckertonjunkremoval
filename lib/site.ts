@@ -29,7 +29,7 @@ export const services = [
     slug: "junk-removal",
     title: "Junk Removal",
     blurb:
-      "Single items or a whole garage full. We load everything by hand, sweep up after ourselves, and haul it away the same day whenever we can.",
+      "Single items or a whole garage. We load it, sweep up, and haul it off, often same day.",
     bullets: [
       "Garage, attic, and basement cleanouts",
       "Hot tubs, sheds, and playsets",
@@ -40,7 +40,7 @@ export const services = [
     slug: "furniture-removal",
     title: "Furniture Removal",
     blurb:
-      "Couches, sectionals, mattresses, dressers, and dining sets removed without a scratch on your walls or floors. No need to drag anything to the curb.",
+      "Couches, mattresses, dressers, and dining sets carried out clean. Nothing has to reach the curb.",
     bullets: [
       "Sofas, sectionals, and recliners",
       "Mattresses and box springs",
@@ -51,7 +51,7 @@ export const services = [
     slug: "appliance-removal",
     title: "Appliance Removal",
     blurb:
-      "Old refrigerators, washers, dryers, water heaters, and AC units disconnected, carried out, and recycled the right way.",
+      "Fridges, washers, dryers, and water heaters disconnected, carried out, and recycled properly.",
     bullets: [
       "Refrigerators and freezers",
       "Washers, dryers, and dishwashers",
@@ -62,7 +62,7 @@ export const services = [
     slug: "estate-cleanouts",
     title: "Estate Cleanouts",
     blurb:
-      "Full property cleanouts handled with patience and respect. We work with families, realtors, and landlords across Tuckerton and Little Egg Harbor to get a house market ready.",
+      "Whole homes cleared with care for families, realtors, and landlords in Tuckerton and Little Egg Harbor.",
     bullets: [
       "Whole home and hoarding cleanouts",
       "Realtor and landlord turnovers",
@@ -73,7 +73,7 @@ export const services = [
     slug: "construction-debris",
     title: "Construction Debris",
     blurb:
-      "Demo debris, drywall, lumber, roofing, decking, and flooring cleared out so your crew keeps moving. Great for contractors working the Radio Road and Mystic Island builds.",
+      "Drywall, lumber, roofing, decking, and demo debris cleared so your crew keeps moving.",
     bullets: [
       "Renovation and demo debris",
       "Decking, fencing, and siding",
@@ -84,7 +84,7 @@ export const services = [
     slug: "yard-waste-removal",
     title: "Yard Waste Removal",
     blurb:
-      "Storm cleanup, brush piles, branches, leaves, and old landscaping hauled off before it takes over the yard. Common work after a nor'easter along the bay.",
+      "Storm debris, brush, branches, and old landscaping gone before it takes over the yard.",
     bullets: [
       "Storm and flood debris",
       "Brush, branches, and stumps",

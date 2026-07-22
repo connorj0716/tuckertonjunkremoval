@@ -31,9 +31,9 @@ export default function Services() {
             Junk removal services for Tuckerton and Little Egg Harbor
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-navy-700">
-            If it fits in the truck and it is not hazardous, we will take it.
-            Homes, rentals, job sites, and businesses across Tuckerton, Bass
-            River, Eagleswood, Manahawkin, and Stafford Township.
+            If it fits in the truck and is not hazardous, we take it. Homes,
+            rentals, and job sites across Tuckerton, Bass River, Eagleswood,
+            Manahawkin, and Stafford Township.
           </p>
         </div>
 
